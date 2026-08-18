@@ -13,18 +13,32 @@ colors:
   admin-sand-fill: "hsl(30, 10%, 93%)"
   admin-sand-border: "hsl(30, 10%, 70%)"
   ink: "hsl(0, 0%, 6%)"
+  ink-secondary: "hsl(0, 0%, 40%)"
   paper: "hsl(0, 0%, 97%)"
   ghost-border: "hsl(0, 0%, 60%)"
+  hairline: "hsl(0, 0%, 88%)"
+  focus-ring: "hsl(215, 15%, 50%)"
+  caret: "hsl(215, 15%, 40%)"
+  scrollbar-thumb: "hsl(0, 0%, 80%)"
+  scrollbar-thumb-hover: "hsl(0, 0%, 70%)"
+  blockquote-border: "hsl(0, 0%, 70%)"
+  ghost-hover-border: "hsl(0, 0%, 45%)"
+  ghost-hover-text: "hsl(0, 0%, 30%)"
+  ghost-label: "hsl(0, 0%, 55%)"
+  template-hover-border: "hsl(0, 0%, 75%)"
 typography:
   body:
-    fontFamily: "[to be resolved during implementation]"
-    fontSize: "smaller than default; dense and quiet"
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    fontSize: "13px; smaller than default, dense and quiet"
     fontWeight: 400
     lineHeight: 1.4
 rounded:
-  card: "[to be resolved during implementation]"
+  card: "12px"
+  control: "6px"
 spacing:
-  card-gap: "[to be resolved during implementation]"
+  card-gap: "10px"
+  column-width: "560px"
+  sidebar-width: "220px"
 ---
 
 # Design System: callsheet
@@ -73,10 +87,10 @@ The five seed activity types are the primary palette. Each is a fill/border pair
 
 ## Typography
 
-**Display Font:** [to be resolved during implementation]
-**Body Font:** [to be resolved during implementation]
+**Display Font:** system UI stack (no display face — the board is quiet, no display voice).
+**Body Font:** system UI stack: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif`.
 
-**Character:** Smaller than default, dense and quiet. Type recedes behind the colour — it is the quiet carrier of the day's content, not a display voice. The exact family pairing is to be resolved during implementation; the confirmed directive is that text is smaller than default and dense.
+**Character:** Smaller than default, dense and quiet. Type recedes behind the colour — it is the quiet carrier of the day's content, not a display voice. **Implemented at 13px / line-height 1.4 / weight 400** (resolved during implementation, phase 4).
 
 ### Hierarchy
 
@@ -89,15 +103,15 @@ The five seed activity types are the primary palette. Each is a fill/border pair
 
 ## Layout
 
-A single centred vertical column of cards represents the day as a quiet linear sequence. There is no timeline, no hour-grid, no multi-column board. A collapsible left sidebar lists durable repeatable templates (the call board); dragging a template into the day pane instantiates a provisional card. Day navigation uses left/right gutter arrows and Cmd+Left/Right, with a quiet centred date header. Exact measurements (column width, card gap, sidebar width) are to be resolved during implementation.
+A single centred vertical column of cards represents the day as a quiet linear sequence. There is no timeline, no hour-grid, no multi-column board. A collapsible left sidebar lists durable repeatable templates (the call board); dragging a template into the day pane instantiates a provisional card. Day navigation uses left/right gutter arrows and Cmd+Left/Right, with a quiet centred date header. **Implemented measurements (resolved during implementation, phase 4):** column width 560px centred; card gap 10px; sidebar width 220px (collapsible).
 
 ## Elevation & Depth
 
-The system is flat by default — depth is conveyed by the accent border framing each card, not by shadows. The confirmed visual world does not specify a shadow vocabulary; shadows are to be resolved during implementation and, if used, should be ambient and soft, never hard offset blocks.
+The system is flat by default — depth is conveyed by the accent border framing each card, not by shadows. **Implemented: no shadows on cards** (resolved during implementation, phase 4); depth comes solely from the accent border.
 
 ## Shapes
 
-The form language is to be resolved during implementation. The confirmed invariant is that cards are framed by a slightly darker accent border of the same hue as their fill; the exact corner radius is not specified in the signed-off sketch.
+The form language is to be resolved during implementation. The confirmed invariant is that cards are framed by a slightly darker accent border of the same hue as their fill; the exact corner radius is not specified in the signed-off sketch. **Implemented: card radius 12px** (resolved during implementation, phase 4).
 
 ## Components
 
