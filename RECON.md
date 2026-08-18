@@ -1,7 +1,7 @@
 # RECON — callsheet Phase 0
 
 Read-only survey of the callsheet repo (worktree `project/callsheet` @ `c8f9cad`,
-main repo `/Users/chris/Development/callsheet` @ `c8f9cad`). No code changed.
+main repo `callsheet` @ `c8f9cad`). No code changed.
 
 ## 1. What's in place
 
